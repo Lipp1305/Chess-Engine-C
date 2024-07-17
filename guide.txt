@@ -1,0 +1,26 @@
+STRUCTURE OF GAME
+
+
+. load board and pieces
+    
+    8x8 and if the piece is trying to move <1 or 8< not cool
+
+//. start game white turn
+
+. check which piece they want to move => is it a valid move?
+    define each square with a coordinate, current piece (a-h, 1-8)
+
+    check where mouse down -> get square, get piece, get moves possible(for that piece, inside or outside bounds?).
+    to mouse up -> expected move
+    if(move good) => update board; else => reject and reset mouse or event
+
+    
+
+. update board
+    change the states of the pieces -> taken piece, new move, check, etc
+    
+
+
+. check game state is there a winner? if not, continue.
+
+. 
