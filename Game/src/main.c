@@ -4,6 +4,16 @@
 
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 800;
+int *starting_board = {
+    {1, 1, 1, 1, 1, 1, 1, 1},
+    {0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0},
+    {1, 1, 1, 1, 1, 1, 1, 1}
+}
 
 int main(int argc, char *argv[]){
 
@@ -42,6 +52,10 @@ int main(int argc, char *argv[]){
     //Event object
     SDL_Event e;
 
+    //create board => starts like this
+    int *board = &starting_board;
+
+
     //While app running
     while(!quit){
 
@@ -51,13 +65,16 @@ int main(int argc, char *argv[]){
                 quit = 1;
             }
         }
-
-        //Clear screen
         SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
         SDL_RenderClear(renderer);
-
-        //Draw game board
         drawGameBoard(renderer);
+        //drawGamePieces(&board);
+
+        //handle board update events
+
+
+
+        //UPDATE BOARD
 
         //Update screen
         SDL_RenderPresent(renderer);

@@ -1,13 +1,20 @@
 STRUCTURE OF GAME
 
+1. load board and pieces inside of main function (no classes)
 
-. load board and pieces
+    make functions that move pieces (in another file)
     
     8x8 and if the piece is trying to move <1 or 8< not cool
 
+    represent the board by:  
+
+    have pieces at the starting positions
+
+    make board easily updatable (move, take, check state, switch turn??)
+
 //. start game white turn
 
-. check which piece they want to move => is it a valid move?
+2. check which piece the user wants to move => is it a valid move?
     define each square with a coordinate, current piece (a-h, 1-8)
 
     check where mouse down -> get square, get piece, get moves possible(for that piece, inside or outside bounds?).

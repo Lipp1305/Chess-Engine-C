@@ -1,25 +1,22 @@
 #include "board.h"
 
+const int SCREEN_WIDTH = 800;
+const int BOARD_SIZE = 8;
+int square_size = SCREEN_WIDTH / BOARD_SIZE;
+
+
+
+
+
+//draw the game board once
 void drawGameBoard(SDL_Renderer *renderer){
 
-    //Total width in pixels
-    const int SCREEN_WIDTH = 800;
-    //Width in squares
-    const int BOARD_SIZE = 8;
-    //Evenly draw squares along width
-    int square_size = SCREEN_WIDTH / BOARD_SIZE;
-
-    //create square object 
-    //used like a stamp, same object but positions and colors move
-    //then gets drawn
     SDL_Rect square;
     square.w = square_size;
     square.h = square_size;
 
-    //loop through each square drawing appropreate space
     for(int row = 0; row < BOARD_SIZE; ++row){
         for(int col = 0; col < BOARD_SIZE; ++col){
-            //position square
             square.x = col * square_size; //move n pixels to the right col times
             square.y = row * square_size; //move m pixels down row times
 
@@ -33,4 +30,6 @@ void drawGameBoard(SDL_Renderer *renderer){
         }
     }
 }
+//Draw pieces on top?
+
 
