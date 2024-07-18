@@ -22,9 +22,9 @@ void drawGameBoard(SDL_Renderer *renderer){
 
             //color based on pos
             if((row + col) % 2 == 0){
-                SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); //white
+                SDL_SetRenderDrawColor(renderer, 100, 50, 0, 255); //white
             }else{
-                SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0); //black
+                SDL_SetRenderDrawColor(renderer, 255, 150, 100, 255); //black
             }
             SDL_RenderFillRect(renderer, &square);
         }
